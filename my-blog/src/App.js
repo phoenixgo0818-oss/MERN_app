@@ -1,4 +1,5 @@
 import './App.css';
+import NavBar from './NavBar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ArticlePage from './pages/ArticlePage';
@@ -9,6 +10,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+      <NavBar />
       <header className="app-hero">
         <h1 className="app-hero__title">KWS Phoenix Blog</h1>
         <div className="app-hero__rule" aria-hidden="true" />

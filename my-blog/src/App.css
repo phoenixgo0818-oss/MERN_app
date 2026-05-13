@@ -1,7 +1,7 @@
 .App {
   max-width: 36rem;
   margin: 0 auto;
-  padding: clamp(2.5rem, 8vh, 4rem) 1.5rem 3rem;
+  padding: clamp(1.25rem, 4vh, 2rem) 1.5rem 3rem;
   text-align: center;
 }
 
