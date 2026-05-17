@@ -1,11 +1,33 @@
 :root {
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --color-bg: #0e1117;
+  --color-bg-elevated: #161b22;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-text-subtle: #6e7681;
+  --color-border: rgba(240, 246, 252, 0.1);
+  --color-accent: #6ea8fe;
+  --color-accent-hover: #9ec5ff;
+  --color-accent-muted: #388bfd;
+  --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+html {
+  color-scheme: dark;
 }
 
 body {
   margin: 0;
   font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(110, 168, 254, 0.08),
+    transparent
+  );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,4 +35,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: var(--color-accent);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
 }
