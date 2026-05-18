@@ -1,0 +1,37 @@
+.static-page {
+  text-align: center;
+}
+
+.static-page__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.static-page__lead {
+  margin: 0 0 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.static-page__cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.static-page__cta:hover {
+  color: var(--color-accent-hover);
+  border-color: rgba(110, 168, 254, 0.35);
+}
