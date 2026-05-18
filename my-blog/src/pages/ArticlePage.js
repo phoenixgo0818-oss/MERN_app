@@ -1,5 +1,7 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import articles from './article-content';
+import ArticlesList from '../components/ArticlesList';
+import './ArticlePage.css';
 
 const ArticlePage = () => {
   const { articleId } = useParams();
@@ -9,23 +11,18 @@ const ArticlePage = () => {
     return <h1>Article not found</h1>;
   }
 
-  const otherArticles = articles.filter((a) => a.name !== articleId);
-
   return (
-    <>
-      <h1>{article.title}</h1>
-      {article.content.map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
-      ))}
-      <h3>Other articles:</h3>
-      <ul>
-        {otherArticles.map((a) => (
-          <li key={a.name}>
-            <Link to={`/article/${a.name}`}>{a.title}</Link>
-          </li>
+    <div className="article-layout">
+      <aside className="article-layout__sidebar">
+        <ArticlesList articles={articles} activeArticleId={articleId} />
+      </aside>
+      <main className="article-layout__main">
+        <h1>{article.title}</h1>
+        {article.content.map((paragraph, i) => (
+          <p key={i}>{paragraph}</p>
         ))}
-      </ul>
-    </>
+      </main>
+    </div>
   );
 };
 
