@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import articles from './article-content';
 import ArticlesList from '../components/ArticlesList';
+import NotFoundPage from './NotFoundPage';
 import './ArticlePage.css';
 
 const ArticlePage = () => {
@@ -8,7 +9,7 @@ const ArticlePage = () => {
   const article = articles.find((a) => a.name === articleId);
 
   if (!article) {
-    return <h1>Article not found</h1>;
+    return <NotFoundPage />;
   }
 
   return (
